@@ -1,0 +1,197 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+  }
+  
+  nav a {
+    color: #0ff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+    position: relative;
+  }
+  
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+  
+  .planet {
+    width: 100px;
+    animation: float 5s ease-in-out infinite;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Button */
+  .btn-glow {
+    background: #0ff;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 20px #0ff;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn-glow:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 30px #0ff;
+  }
+  
+  /* Content */
+  .content {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #777;
+  }
+  
+  /* Background bintang (tanpa gambar) */
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+  
+  
+  
+  /* Animasi bintang berkedip */
+  @keyframes twinkling {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  
+  /* Roket */
+  .rocket {
+    width: 100px;
+    animation: fly 10s linear infinite;
+    margin-top: 50px;
+  }
+  
+  /* Musik tombol */
+  #music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid #0ff;
+    color: #0ff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  /* Animasi */
+  @keyframes moveStars {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -10000px 5000px;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translate(-50%, 0px);
+    }
+    50% {
+      transform: translate(-50%, -20px);
+    }
+  }
+  
+  @keyframes fly {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-800px) rotate(360deg);
+    }
+  }
+  
+  /* Responsif */
+  @media screen and (max-width: 600px) {
+    .hero h2 {
+      font-size: 1.8em;
+    }
+    .planet, .rocket {
+      width: 60px;
+    }
+  }

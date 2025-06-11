@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galaksi Edukasi By Nafian Akbar Abimanyu</title>
+  <link rel="stylesheet" href="tema.css" />
+</head>
+<body>
+  <!-- Background bintang -->
+  <div class="stars"></div>
+
+  <!-- Musik latar -->
+  <audio id="bg-music" autoplay loop>
+    <source src="galaxy.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+
+  <!-- Kontrol musik -->
+  <button id="music-toggle">🔊</button>
+
+  <!-- Header -->
+  <header>
+    <h1>🌌 Galaksi Edukasi PT.NafianAkbarS</h1>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#features">Fitur</a>
+      <a href="#join">Gabung</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="planet3.png" class="planet" alt="Planet">
+    <h2>Belajar Tak Terbatas, Seperti Galaksi</h2>
+    <p>Jelajahi dunia pengetahuan tanpa batas, kapan pun dan di mana pun.</p>
+    <a href="#join" class="btn-glow">Mulai Sekarang</a>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section id="about" class="content">
+    <h3>Tentang Kami</h3>
+    <p>Kami percaya setiap orang berhak mendapatkan akses ke ilmu pengetahuan yang luas dan menyenangkan.</p>
+  </section>
+
+  <!-- Fitur -->
+  <section id="features" class="content">
+    <h3>Fitur Unggulan</h3>
+    <ul class="features">
+      <li>📚 Materi Interaktif</li>
+      <li>🧠 Kuis Pintar</li>
+      <li>📈 Statistik Kemajuan</li>
+      <li>🚀 Tantangan Harian</li>
+    </ul>
+    <img src="roket.png" class="rocket" alt="Roket">
+  </section>
+
+  <!-- Gabung -->
+  <section id="join" class="content">
+    <h3>Gabung Sekarang</h3>
+    <p>Jadilah bagian dari penjelajah galaksi ilmu pengetahuan!</p>
+    <a href="#" class="btn-glow">Daftar Gratis</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Galaksi Edukasi. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+  const starsContainer = document.querySelector('.stars');
+  for (let i = 0; i < 100; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.top = Math.random() * 100 + '%';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.animationDuration = (Math.random() * 3 + 1) + 's';
+    starsContainer.appendChild(star);
+  }
+  </script>
+</body>
+</html>
